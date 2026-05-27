@@ -105,3 +105,21 @@ public:
 
     CompanionRobot() : Robot(new NormalTalk(), new NormalWalk(), new NoFly()) { }
 };
+
+class BirdRobot : public Robot {
+
+public:
+
+    BirdRobot() : Robot(new NormalTalk(), new NoWalk(), new NormalFly()) { }
+};
+
+int main() {
+
+    Robot* r = new CompanionRobot();
+
+    r->performTalk();
+
+    r->performWalk();
+
+    r->performFly();
+}
